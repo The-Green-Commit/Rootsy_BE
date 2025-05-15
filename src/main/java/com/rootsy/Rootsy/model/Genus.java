@@ -18,18 +18,18 @@ import lombok.Setter;
 @Getter @Setter
 public class Genus {
 
-@Id
-@SequenceGenerator (name="family_id_sequence", sequenceName = "family_id_sequence", allocationSize = 1, initialValue = 1)
-@GeneratedValue (strategy = GenerationType.SEQUENCE, generator = "family_id_sequence")
-private Integer id;
+    @Id
+    @SequenceGenerator (name="family_id_sequence", sequenceName = "family_id_sequence", allocationSize = 1, initialValue = 1)
+    @GeneratedValue (strategy = GenerationType.SEQUENCE, generator = "family_id_sequence")
+    private Integer id;
 
-@Column
-@NotBlank (message = "(!) ERROR: el campo del tipo de la família no puede estar nulo")
-@Size (max = 20, message = "(!) ERROR: máximo de 20 caracteres permitidos")
-@Pattern (regexp = "^[^\\/*<>|]+$", message = "(!) ERROR: No está permitido el uso de caracteres especiales")
-private String genus;
+    @Column
+    @NotBlank (message = "(!) ERROR: this field cannot be blank nor have blank spaces")
+    @Size (max = 20, message = "(!) ERROR: maximum of 20 characters allowed")
+    @Pattern (regexp = "^[^\\/*<>|]+$", message = "(!) ERROR: some special characters aren't allowed")
+    private String genus;
 
-public Genus(){};
+    public Genus(){};
 
 }
 

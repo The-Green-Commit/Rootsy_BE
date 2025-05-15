@@ -24,9 +24,9 @@ public class Family {
     private Integer id;
 
     @Column
-    @NotBlank (message = "(!) ERROR: el campo del tipo de la família no puede estar nulo")
-    @Size (max = 20, message = "(!) ERROR: máximo de 20 caracteres permitidos")
-    @Pattern (regexp = "^[^\\/*<>|]+$", message = "(!) ERROR: No está permitido el uso de caracteres especiales")
+    @NotBlank (message = "(!) ERROR: this field cannot be blank nor have blank spaces")
+    @Size (max = 20, message = "(!) ERROR: maximum of 20 characters allowed")
+    @Pattern (regexp = "^[^\\/*<>|]+$", message = "(!) ERROR: some special characters aren't allowed")
     private String family;
 
     //AÑADIR LAS RELACIONES CON LAS DEMÁS ENTIDADES

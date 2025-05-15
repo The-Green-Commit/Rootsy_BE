@@ -25,16 +25,16 @@ public class User {
     private Integer id;
 
     @Column
-    @NotBlank(message = "(!) ERROR: El campo de nombre no puede estar vacio y tampoco tener espacios")
-    @Pattern(regexp = "^[^\\/:*?\\\"<>|]+$", message = "(!) ERROR: No está permitido el uso de caracteres especiales")
-    @Size(max = 20, message = "(!) ERROR: Máximo de 20 caracteres permitidos en este campo")
+    @NotBlank(message = "(!) ERROR: this field cannot be blank nor have blank spaces")
+    @Pattern(regexp = "^[^\\/:*?\\\"<>|]+$", message = "(!) ERROR: some special characters aren't allowed")
+    @Size(max = 20, message = "(!) ERROR: maximum of 20 characters allowed")
     private String username;
 
     @Column
-    @Email(message = "(!) ERROR: Por favor, ingrese un formato válido de email")
-    @NotBlank(message = "(!) ERROR: El campo de email no puede estar vacio y tampoco tener espacios")
-    @Pattern(regexp = "^[^\\/:*?\\\"<>|]+$", message = "(!) ERROR: No está permitido el uso de caracteres especiales")
-    @Size(max = 50, message = "(!) ERROR: Máximo de 50 caracteres permitidos en este campo")
+    @Email(message = "(!) ERROR: invalid email format")
+    @NotBlank(message = "(!) ERROR: this field cannot be blank nor have blank spaces")
+    @Pattern(regexp = "^[^\\/:*?\\\"<>|]+$", message = "(!) ERROR: some special characters aren't allowed")
+    @Size(max = 50, message = "(!) ERROR: maximum of 50 characters allowed")
     private String email;
 
     //AÑADIR RELACIONES CON LAS DEMÁS ENTIDADES

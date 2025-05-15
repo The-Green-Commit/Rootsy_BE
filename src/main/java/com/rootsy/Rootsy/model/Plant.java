@@ -24,43 +24,43 @@ public class Plant {
     private Integer id;
 
     @Column
-    @NotBlank(message = "(!) ERROR: El campo de nombre de la planta no puede estar vacio y tampoco tener espacios")
-    @Pattern(regexp = "^[^\\/:*?\\\"<>|]+$", message = "(!) ERROR: No está permitido el uso de caracteres especiales")
-    @Size(max = 30, message = "(!) ERROR: Máximo de 30 caracteres permitidos en este campo")
+    @NotBlank(message = "(!) ERROR: this field cannot be blank nor have blank spaces")
+    @Pattern(regexp = "^[^\\/:*?\\\"<>|]+$", message = "(!) ERROR: some special characters aren't allowed")
+    @Size(max = 30, message = "(!) ERROR: maximum of 30 characters allowed")
     private String plantName;
 
     @Column
-    @NotBlank(message = "(!) ERROR: El campo de la descripción no puede estar vacio y tampoco tener espacios")
-    @Pattern(regexp = "^[^\\/:*?\\\"<>|]+$", message = "(!) ERROR: No está permitido el uso de caracteres especiales")
-    @Size(max = 150, message = "(!) ERROR: Máximo de 150 caracteres permitidos en este campo")
+    @NotBlank(message = "(!) ERROR: this field cannot be blank nor have blank spaces")
+    @Pattern(regexp = "^[^\\/:*?\\\"<>|]+$", message = "(!) ERROR: some special characters aren't allowed")
+    @Size(max = 150, message = "(!) ERROR: maximum of 150 characters allowed")
     private String description;
 
     @Column
-    @NotBlank(message = "(!) ERROR: El campo de la luminosidad no puede estar vacio y tampoco tener espacios")
-    @Pattern(regexp = "^[^\\/:*?\\\"<>|]+$", message = "(!) ERROR: No está permitido el uso de caracteres especiales")
-    @Size(max = 50, message = "(!) ERROR: Máximo de 50 caracteres permitidos en este campo")
+    @NotBlank(message = "(!) ERROR: this field cannot be blank nor have blank spaces")
+    @Pattern(regexp = "^[^\\/:*?\\\"<>|]+$", message = "(!) ERROR: some special characters aren't allowed")
+    @Size(max = 50, message = "(!) ERROR: maximum of 50 characters allowed")
     private String lightConditions;
 
     @Column
-    @NotBlank(message = "(!) ERROR: El campo del riego no puede estar vacio y tampoco tener espacios")
-    @Pattern(regexp = "^[^\\/:*?\\\"<>|]+$", message = "(!) ERROR: No está permitido el uso de caracteres especiales")
-    @Size(max = 50, message = "(!) ERROR: Máximo de 50 caracteres permitidos en este campo")
+    @NotBlank(message = "(!) ERROR: this field cannot be blank nor have blank spaces")
+    @Pattern(regexp = "^[^\\/:*?\\\"<>|]+$", message = "(!) ERROR: some special characters aren't allowed")
+    @Size(max = 50, message = "(!) ERROR: maximum of 50 characters allowed")
     private String watering;
 
     @Column
-    @NotBlank(message = "(!) ERROR: El campo de nombre no puede estar vacio y tampoco tener espacios")
-    @Pattern(regexp = "^[^\\/:*?\\\"<>|]+$", message = "(!) ERROR: No está permitido el uso de caracteres especiales")
-    @Size(max = 50, message = "(!) ERROR: Máximo de 50 caracteres permitidos en este campo")
+    @NotBlank(message = "(!) ERROR: this field cannot be blank nor have blank spaces")
+    @Pattern(regexp = "^[^\\/:*?\\\"<>|]+$", message = "(!) ERROR: some special characters aren't allowed")
+    @Size(max = 50, message = "(!) ERROR: maximum of 50 characters allowed")
     private String humidity;
 
     @Column
-    @NotBlank(message = "(!) ERROR: El campo de nombre no puede estar vacio y tampoco tener espacios")
-    @Pattern(regexp = "^[^\\/:*?\\\"<>|]+$", message = "(!) ERROR: No está permitido el uso de caracteres especiales")
-    @Size(max = 50, message = "(!) ERROR: Máximo de 50 caracteres permitidos en este campo")
+    @NotBlank(message = "(!) ERROR: this field cannot be blank nor have blank spaces")
+    @Pattern(regexp = "^[^\\/:*?\\\"<>|]+$", message = "(!) ERROR: some special characters aren't allowed")
+    @Size(max = 50, message = "(!) ERROR: maximum of 50 characters allowed")
     private String temperature;
 
     @Column
-    @NotBlank (message = "(!) ERROR: El campo de nombre no puede estar vacio y tampoco tener espacios")
+    @NotBlank (message = "(!) ERROR: this field cannot be blank nor have blank spaces")
     private Boolean petfriendly;
 
     @Column
