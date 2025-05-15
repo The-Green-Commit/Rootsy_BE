@@ -25,7 +25,7 @@ public class Type {
 
     @Column
     @NotBlank (message = "(!) ERROR: el campo del tipo de categoría no puede estar nulo")
-    @Size (max = 20)
+    @Size (max = 20, message = "(!) ERROR: máximo de 20 caracteres permitidos")
     @Pattern (regexp = "^[^\\/*<>|]+$", message = "(!) ERROR: No está permitido el uso de caracteres especiales")
     private String type;
 
