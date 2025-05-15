@@ -29,6 +29,8 @@ public class Family {
     @Pattern (regexp = "^[^\\/*<>|]+$", message = "(!) ERROR: No está permitido el uso de caracteres especiales")
     private String family;
 
+    //AÑADIR LAS RELACIONES CON LAS DEMÁS ENTIDADES
+
     public Family(){};
 
 }
