@@ -5,16 +5,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.rootsy.Rootsy.service.TypeService;
 import com.rootsy.Rootsy.model.Type;
 import jakarta.validation.Valid;
-
 import java.util.List;
-
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-
 
 @RestController
 @RequestMapping("api/v1/type")
@@ -35,13 +30,9 @@ public class TypeController {
     public List<Type> getAllTypes() {
         return typeService.getAllTypes();
     }
-    
 
-    }
-    
+}
 
-//MAP GET ALL
-
-//MAP GET BY TYPE
+//MAP GET BY TYPE?
 
 
