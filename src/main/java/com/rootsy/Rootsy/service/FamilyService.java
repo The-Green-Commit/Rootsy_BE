@@ -4,10 +4,12 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
 import com.rootsy.Rootsy.model.Family;
 import com.rootsy.Rootsy.repository.FamilyRepository;
 
+@Service
 public class FamilyService {
     
     private final FamilyRepository familyRepository;
