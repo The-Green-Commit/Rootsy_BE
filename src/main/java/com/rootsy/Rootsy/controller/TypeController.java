@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("api/v1/type")
 public class TypeController {
     
-//private final TypeService typeService;
+private final TypeService typeService;
 
-//public TypeController(TypeService typeService){
-//  this.typeService = typeService;
-//}
+public TypeController(TypeService typeService){
+ this.typeService = typeService;
+}
 
 //MAP GET ALL
 
