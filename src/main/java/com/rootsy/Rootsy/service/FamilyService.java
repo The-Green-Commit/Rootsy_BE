@@ -1,5 +1,7 @@
 package com.rootsy.Rootsy.service;
 
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -21,6 +23,10 @@ public class FamilyService {
         //}
 
         return new ResponseEntity<>(familyRepository.save(family), HttpStatus.CREATED);
+    }
+
+    public List<Family> getAllFamilies(){
+        return familyRepository.findAll();
     }
 
 }

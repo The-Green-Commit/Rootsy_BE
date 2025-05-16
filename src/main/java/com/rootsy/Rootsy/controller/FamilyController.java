@@ -5,9 +5,15 @@ import org.springframework.web.bind.annotation.RestController;
 import com.rootsy.Rootsy.model.Family;
 import com.rootsy.Rootsy.service.FamilyService;
 import jakarta.validation.Valid;
+
+import java.util.List;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 @RestController
@@ -25,7 +31,9 @@ public class FamilyController {
         return familyService.createFamily(family);
     }
     
-
-    //MAP GET ALL
+    @GetMapping
+    public List<Family> getAllFamilies(@Valid @RequestParam Family family) {
+        return this.familyService.getAllFamilies();
+    }
 
 }
