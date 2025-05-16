@@ -1,11 +1,12 @@
 package com.rootsy.Rootsy.service;
 
+import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
 import com.rootsy.Rootsy.model.User;
 import com.rootsy.Rootsy.repository.UserRepository;
+
 
 @Service
 public class UserService {
@@ -28,4 +29,7 @@ public class UserService {
         return new ResponseEntity<>(userRepository.save(user), HttpStatus.CREATED);
     }
 
+    public List<User> getAllUsers(){
+        return userRepository.findAll();
+    }
 }
