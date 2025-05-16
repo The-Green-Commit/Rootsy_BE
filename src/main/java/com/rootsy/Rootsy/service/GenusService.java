@@ -1,8 +1,11 @@
 package com.rootsy.Rootsy.service;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
+import com.rootsy.Rootsy.model.Genus;
 import com.rootsy.Rootsy.repository.GenusRepository;
+
 
 @Service
 public class GenusService {
@@ -11,6 +14,15 @@ public class GenusService {
 
     public GenusService(GenusRepository genusRepository) {
         this.genusRepository = genusRepository;
+    }
+
+    public ResponseEntity<Object> createGenus(Genus genus) {
+
+        // if (genusRepository.findByGenus(genus.getGenus()) != null) {
+        //  throw new GenusAlreadyExistsException(message:"(!) ERROR: this family already exists. Try a new one.")
+        //}
+
+        return new ResponseEntity<>(genusRepository.save(genus), HttpStatus.CREATED);
     }
 
 }
