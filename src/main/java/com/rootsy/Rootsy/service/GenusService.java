@@ -1,5 +1,7 @@
 package com.rootsy.Rootsy.service;
 
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -25,6 +27,9 @@ public class GenusService {
         return new ResponseEntity<>(genusRepository.save(genus), HttpStatus.CREATED);
     }
 
+    public List<Genus> getAllGenuses() {
+        return genusRepository.findAll();
+    }
 }
 
 
