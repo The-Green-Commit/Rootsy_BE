@@ -33,7 +33,7 @@ public class PlantService {
         Optional<Genus> genusOptional = genusRepository.getGenusById(genusId);
         Optional<Type> typeOptional = typeRepository.getTypeById(typeId);
 
-        if (plant.getPlantName() != null && plantRepository.findByPlantName(plant.getPlantName()) != null) {
+        if (plant.getPlantName() != null && plantRepository.findByPlantName(plant.getPlantName()).isPresent()) {
             throw new PlantNameAlreadyExistsException("(!) ERROR: this plant already exists");
         }
 
