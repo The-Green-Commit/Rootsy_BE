@@ -10,6 +10,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
@@ -62,7 +63,7 @@ public class Plant {
     private String temperature;
 
     @Column
-    @NotBlank (message = "(!) ERROR: this field cannot be blank nor have blank spaces")
+    @NotNull (message = "(!) ERROR: this field cannot be blank nor have blank spaces")
     private Boolean petfriendly;
 
     @Column
