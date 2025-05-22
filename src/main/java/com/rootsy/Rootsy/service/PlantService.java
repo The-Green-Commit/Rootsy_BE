@@ -1,7 +1,9 @@
 package com.rootsy.Rootsy.service;
 
+import java.util.Optional;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import com.rootsy.Rootsy.exceptions.PlantNameAlreadyExistsException;
 import com.rootsy.Rootsy.model.Family;
 import com.rootsy.Rootsy.model.Genus;
 import com.rootsy.Rootsy.model.Type;
@@ -26,13 +28,17 @@ public class PlantService {
     }
 
     public ResponseEntity<Object> createPlant(Plant plant, Integer familyId, Integer genusId, Integer typeId) {
-        Family family = familyRepository.getFamilyById(familyId);
-        Genus genus = genusRepository.getGenusById(genusId);
-        Type type = typeRepository.getTypeById(typeId);
+        Optional<Family> familyOptional = familyRepository.getFamilyById(familyId);
+        Optional<Genus> genusOptional = genusRepository.getGenusById(genusId);
+        Optional<Type> typeOptional = typeRepository.getTypeById(typeId);
 
-        plant.setFamily(family);
-        plant.setGenus(genus);
-        plant.setType(type);
+        if (plant.getPlantName() != null && plantRepository.findByPlantName(plant.getPlantName()) != null) {
+            throw new PlantNameAlreadyExistsException("(!) ERROR: this plant already exists");
+        }
+
+        plant.setFamily(familyOptional.get());
+        plant.setGenus(genusOptional.get());
+        plant.setType(typeOptional.get());
 
         return new ResponseEntity<>(plantRepository.save(plant), HttpStatus.CREATED);
     }
