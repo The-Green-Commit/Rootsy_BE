@@ -6,6 +6,5 @@ import com.rootsy.Rootsy.model.Type;
 
 @Repository
 public interface TypeRepository extends JpaRepository <Type, Integer>{
-
-    
+    Type getTypeById(Integer id);
 }
