@@ -33,6 +33,5 @@ public class TypeController {
 
 }
 
-//MAP GET BY TYPE?
 
 

@@ -18,10 +18,6 @@ public class TypeService {
 
     public ResponseEntity<Object> createType(Type type) {
 
-        // if (typeRepository.findByType(type.getType()) != null) {
-        //     throw new TypeAlreadyExistsException(message: "(!) ERROR: this type already exists. Try a new one.")
-        // }
-
         return new ResponseEntity<>(typeRepository.save(type), HttpStatus.CREATED);
     }
 

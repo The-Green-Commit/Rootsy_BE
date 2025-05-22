@@ -34,17 +34,4 @@ public class PlantController {
         return plantService.getAllPlants();
     }
     }
-        
-    
-    //MAP GET ALL
-    
-    //MAP GET BY ID
-
-    //MAP GET BY TYPE
-
-    //MAP GET BY PET-FRIENDLY
-
-    //MAP GET BY FAMILY
-        
-    //MAP DELETE(sin cascade)
 
