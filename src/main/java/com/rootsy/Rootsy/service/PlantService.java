@@ -1,5 +1,6 @@
 package com.rootsy.Rootsy.service;
 
+import java.util.List;
 import java.util.Optional;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -41,6 +42,10 @@ public class PlantService {
         plant.setType(typeOptional.get());
 
         return new ResponseEntity<>(plantRepository.save(plant), HttpStatus.CREATED);
+    }
+
+    public List<Plant> getAllPlants() {
+        return this.plantRepository.findAll();
     }
 
 }
