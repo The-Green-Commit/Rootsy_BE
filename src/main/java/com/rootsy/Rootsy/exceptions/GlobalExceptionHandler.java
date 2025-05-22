@@ -25,4 +25,14 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
+    @ExceptionHandler (UsernameAlreadyExistsException.class)
+    public ResponseEntity<String> handleUsernameAlreadyExistsException(Exception ex) {
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler (EmailAlreadyExistsException.class)
+    public ResponseEntity<String> handleEmailAlreadyExistsException(Exception ex) {
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+    }
+
 }
