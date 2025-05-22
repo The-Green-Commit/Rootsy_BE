@@ -1,6 +1,8 @@
 package com.rootsy.Rootsy.model;
 
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import java.util.List;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -37,7 +39,8 @@ public class User {
     @Size(max = 50, message = "(!) ERROR: maximum of 50 characters allowed")
     private String email;
 
-    //AÑADIR RELACIONES CON LAS DEMÁS ENTIDADES
+    @OneToMany(mappedBy = "user")
+    private List<Comment> comments;
 
     public User() {};
 
