@@ -1,10 +1,12 @@
 package com.rootsy.Rootsy.model;
 
+import java.util.List;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
@@ -28,6 +30,9 @@ public class Genus {
     @Size (max = 20, message = "(!) ERROR: maximum of 20 characters allowed")
     @Pattern (regexp = "^[^\\/*<>|]+$", message = "(!) ERROR: some special characters aren't allowed")
     private String genus;
+
+    @OneToMany(mappedBy = "genus")
+    private List<Plant> plants;
 
     public Genus(){};
 

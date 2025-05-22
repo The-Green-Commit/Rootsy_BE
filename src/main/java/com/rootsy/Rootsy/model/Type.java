@@ -1,10 +1,12 @@
 package com.rootsy.Rootsy.model;
 
+import java.util.List;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
@@ -29,7 +31,8 @@ public class Type {
     @Pattern (regexp = "^[^\\/*<>|]+$", message = "(!) ERROR: some special characters aren't allowed")
     private String type;
 
-    //AÑADIR RELACIÓN CON LAS DEMÁS ENTIDADES
+    @OneToMany(mappedBy = "family")
+    private List<Plant> plants;
 
     public Type (){};
 
