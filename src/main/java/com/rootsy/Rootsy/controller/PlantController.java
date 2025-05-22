@@ -3,15 +3,34 @@ package com.rootsy.Rootsy.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.rootsy.Rootsy.model.Plant;
+import com.rootsy.Rootsy.service.PlantService;
+
+import jakarta.validation.Valid;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+
 @RestController
 @RequestMapping("api/v1/plant")
 public class PlantController {
     
-    //private final PlantService plantService;
+    private final PlantService plantService;
     
-    //public PlantController(PlantService plantService){
-    //  this.plantService = plantService;
-    //}
+    public PlantController(PlantService plantService){
+     this.plantService = plantService;
+    }
+
+    @PostMapping("/{familyId}/{genusId}/{typeId}}")
+    public ResponseEntity<Object> createPlant(@PathVariable Integer familyId, @PathVariable Integer genusId, @PathVariable Integer typeId, @Valid @RequestBody Plant plant) {        
+        
+        return plantService.createPlant(plant, familyId, genusId, typeId);
+    }
+
+    
     
     //MAP GET ALL
     
@@ -22,9 +41,7 @@ public class PlantController {
     //MAP GET BY PET-FRIENDLY
 
     //MAP GET BY FAMILY
-    
-    //MAP POST
-    
+        
     //MAP DELETE(sin cascade)
 
 }

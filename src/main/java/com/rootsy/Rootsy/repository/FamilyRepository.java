@@ -6,5 +6,5 @@ import com.rootsy.Rootsy.model.Family;
 
 @Repository
 public interface FamilyRepository extends JpaRepository<Family, Integer>{
-    
+    Family getFamilyById(Integer id);
 }
