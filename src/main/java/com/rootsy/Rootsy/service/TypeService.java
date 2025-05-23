@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.rootsy.Rootsy.model.Type;
 import com.rootsy.Rootsy.repository.TypeRepository;
 
+
 @Service
 public class TypeService {
     

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.rootsy.Rootsy.model.Genus;
 import com.rootsy.Rootsy.repository.GenusRepository;
 
+
 @Service
 public class GenusService {
     

@@ -15,6 +15,7 @@ import com.rootsy.Rootsy.repository.GenusRepository;
 import com.rootsy.Rootsy.repository.PlantRepository;
 import com.rootsy.Rootsy.repository.TypeRepository;
 
+
 @Service
 public class PlantService {
 

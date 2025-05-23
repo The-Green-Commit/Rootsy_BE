@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.rootsy.Rootsy.model.Family;
 import com.rootsy.Rootsy.repository.FamilyRepository;
 
+
 @Service
 public class FamilyService {
     
