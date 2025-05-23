@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import com.rootsy.Rootsy.exceptions.PlantNameAlreadyExistsException;
 import com.rootsy.Rootsy.model.Family;
 import com.rootsy.Rootsy.model.Genus;
@@ -14,6 +15,7 @@ import com.rootsy.Rootsy.repository.GenusRepository;
 import com.rootsy.Rootsy.repository.PlantRepository;
 import com.rootsy.Rootsy.repository.TypeRepository;
 
+@Service
 public class PlantService {
 
     private final PlantRepository plantRepository;

@@ -23,7 +23,7 @@ public class PlantController {
         this.plantService = plantService;
     }
 
-    @PostMapping("/{familyId}/{genusId}/{typeId}}")
+    @PostMapping("/{familyId}/{genusId}/{typeId}")
     public ResponseEntity<Object> createPlant(@PathVariable Integer familyId, @PathVariable Integer genusId, @PathVariable Integer typeId, @Valid @RequestBody Plant plant) {        
         
         return plantService.createPlant(plant, familyId, genusId, typeId);
@@ -33,5 +33,5 @@ public class PlantController {
     public List<Plant> getAllPlants(){
         return plantService.getAllPlants();
     }
-    }
+}
 
