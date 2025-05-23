@@ -57,6 +57,9 @@ The project uses JPA/Hibernate to automatically create tables in the database. T
 - **Genus**: Scientific classification
 - **Type**: If a plant is indoor or outdoor.
 
+  ![image](https://github.com/user-attachments/assets/949de676-abdc-4baa-875b-bc8e1efb0e15)
+
+
 ### ✅ Validations
 Exception handling and validation are being done in the following ways:
 - **in entities**: through Spring Boot tags such as @Size, @NotNull, @NotBlank, among others.
