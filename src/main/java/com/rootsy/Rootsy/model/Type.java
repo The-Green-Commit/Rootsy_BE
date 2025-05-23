@@ -31,7 +31,7 @@ public class Type {
     @Pattern (regexp = "^[^\\/*<>|]+$", message = "(!) ERROR: some special characters aren't allowed")
     private String type;
 
-    @OneToMany(mappedBy = "family")
+    @OneToMany(mappedBy = "type")
     private List<Plant> plants;
 
     public Type (){};
