@@ -1,6 +1,8 @@
 package com.rootsy.Rootsy.model;
 
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -32,6 +34,7 @@ public class Genus {
     private String genus;
 
     @OneToMany(mappedBy = "genus")
+    @JsonIgnore
     private List<Plant> plants;
 
     public Genus(){};
